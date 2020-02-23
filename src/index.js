@@ -20,8 +20,16 @@ let myArr2 = ["徐乐康","董志雯"]
 let a = 10;
 let h2Title = "h2_title";
 
-function Hello(name) {
-  return <h1>Hello {name}</h1> 
+let xlk = {
+  name:'徐乐康'
+}
+
+function Hello(props) {
+  console.log(props);
+  // props所有属性不可修改 只读
+  // return null
+  // 必须返回对象的属性
+  return <h1>Hello {props.name}</h1>;
 }
 
 
@@ -31,9 +39,9 @@ let myDiv = (
   <div id="h2" title={h2Title}>
     {a + "1"}
     {myH1}
-    {myArr1}
-    {myArr2.map(n=><h1 key={n}>{n}</h1>)}
-    <Hello></Hello>
+    {/* {myArr1} */}
+    {/* {myArr2.map(n=><h1 key={n}>{n}</h1>)} */}
+    <Hello name={xlk.name}></Hello>
   </div>
 );
 
