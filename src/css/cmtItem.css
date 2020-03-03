@@ -1,0 +1,7 @@
+.father {
+  border: 1px dashed #ccc;
+  margin-bottom: 10px;
+}
+:global(.title) {
+  font-weight: bold;
+}
